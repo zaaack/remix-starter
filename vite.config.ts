@@ -28,9 +28,9 @@ export default defineConfig({
   ],
   ssr: IsProd
     ? {
-        external: ['@prisma/client', 'prisma', 'isolated-vm', 'zeromq'],
-        noExternal: true,
-        // noExternal: ["react-use","nstate"],
+        // external: ['@prisma/client', 'prisma', 'isolated-vm', 'zeromq'],
+        // noExternal: true,
+        noExternal: ["react-use","nstate"],
       }
     : {
         noExternal: ['react-use', 'nstate'],
