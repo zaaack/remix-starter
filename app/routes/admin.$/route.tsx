@@ -1,6 +1,7 @@
 import { importClientComp } from "#components/misc/client-comp.js";
 import type { MetaFunction } from "@remix-run/node";
 import { useEffect } from "react";
+
 export const meta: MetaFunction = () => {
   return [{ title: "New Remix App" }, { name: "description", content: "Welcome to Remix!" }];
 };
@@ -13,6 +14,6 @@ export default function Index() {
     })
   },[])
   return (
-    <div id="admin-root"></div>
+    <div id="admin-root">Loading...</div>
   );
 }

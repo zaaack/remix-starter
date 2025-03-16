@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 
 import App from "./App";
 import "./i18n";
+import "@refinedev/antd/dist/reset.css";
 
 export interface Props {
 

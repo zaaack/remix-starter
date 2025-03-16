@@ -10,12 +10,30 @@ declare module "@remix-run/node" {
 const IsProd = process.env.NODE_ENV === 'production'
 
 export default defineConfig({
+  build: {
+    target: "esnext",
+    minify: "oxc",
+    enableBuildReport: true,
+    rollupOptions: {
+      output: {
+        // manualChunks(id, { getModuleInfo, getModuleIds }) {
+        //   if (id.includes('antd')) {
+        //     return 'antd'
+        //   }
+        // },
+      },
+    },
+  },
   esbuild: {
     keepNames: true, // FIX: 压缩bug
   },
+  // esbuild: false,
+  experimental: {
+    // enableNativePlugin: true,
+  },
   plugins: [
     remix({
-      serverModuleFormat: 'esm',
+      serverModuleFormat: "esm",
       future: {
         v3_fetcherPersist: true,
         v3_relativeSplatPath: true,
@@ -30,12 +48,12 @@ export default defineConfig({
     ? {
         // external: ['@prisma/client', 'prisma', 'isolated-vm', 'zeromq'],
         // noExternal: true,
-        noExternal: ["react-use","nstate"],
+        noExternal: ["react-use", "nstate"],
       }
     : {
-        noExternal: ['react-use', 'nstate'],
+        noExternal: ["react-use", "nstate"],
       },
   optimizeDeps: {
-    exclude: ['@sqlite.org/sqlite-wasm', 'sqlocal', 'sqlocal/kysely'],
+    exclude: ["@sqlite.org/sqlite-wasm", "sqlocal", "sqlocal/kysely"],
   },
-})
+});

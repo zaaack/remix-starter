@@ -14,9 +14,9 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@remix-run/node": "^2.15.1",
-    "@remix-run/react": "^2.15.1",
-    "@remix-run/serve": "^2.15.1",
+    "@remix-run/node": "^2.16.0",
+    "@remix-run/react": "^2.16.0",
+    "@remix-run/serve": "^2.16.0",
     "express-status-monitor": "^1.3.4",
     "isbot": "^4.1.0",
     "react": "^19.0.0",
@@ -31,11 +31,11 @@
     "@refinedev/kbar": "^1.3.12",
     "@refinedev/react-router-v6": "^4.6.0",
     "@refinedev/simple-rest": "^5.0.8",
-    "@remix-run/dev": "^2.15.1",
-    "@remix-run/express": "^2.15.1",
+    "@remix-run/dev": "^2.16.0",
+    "@remix-run/express": "^2.16.0",
     "@remix-sse/client": "^1.0.1",
-    "@tanstack/react-query": "^4.10.1",
     "@remix-sse/server": "^1.0.1",
+    "@tanstack/react-query": "^4.10.1",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "antd": "^5.17.0",
@@ -67,7 +67,7 @@
     "tsx": "^4.19.2",
     "typed-rpc": "^6.1.1",
     "typescript": "^5.1.6",
-    "vite": "^6.0.4",
+    "vite": "https://pkg.pr.new/vitejs/rolldown-vite/vite@c90496e",
     "vite-tsconfig-paths": "^5.1.4"
   },
   "engines": {
