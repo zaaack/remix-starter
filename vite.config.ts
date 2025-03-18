@@ -24,12 +24,12 @@ export default defineConfig({
       },
     },
   },
-  esbuild: {
-    keepNames: true, // FIX: 压缩bug
-  },
-  // esbuild: false,
+  // esbuild: {
+  //   keepNames: true, // FIX: 压缩bug
+  // },
+  esbuild: false,
   experimental: {
-    // enableNativePlugin: true,
+    enableNativePlugin: true,
   },
   plugins: [
     remix({
